@@ -23,6 +23,7 @@ def print_data_2d(columns_names, data):
         print(line)
     print('number of lines in db table is '+str(len(data)))
 
+
 def sqlite3_read_db(data_base, table, column_name = None):
     con = sqlite3.connect('./db_bot.db')
 
@@ -91,7 +92,7 @@ def sqlite3_update_record(data_base, table, id_column, record_id, param_column, 
     cur.close()
     con.close()
 
-if __name__ == '__main__':
+"""if __name__ == '__main__':
     data_base = './db_bot.db'
     table = 'bot_request'
     id_column = 'TASK'
@@ -99,9 +100,10 @@ if __name__ == '__main__':
     param_column = 'Budget'
     param_val = 7000000
     data = ['dfsf', 'sdfsdf', 'fsdfsdf', 'sdfsdf']
-    #sqlite3_create_db()
-    sqlite3_add_record(data_base, data, table)
-    sqlite3_read_db(data_base, table)
+    sqlite3_create_db()
+    #sqlite3_add_record(data_base, data, table)
+    #sqlite3_read_db(data_base, table)
     #sqlite3_update_record(data_base, table, id_column, record_id, param_column, param_val)
     #sqlite3_delete_table(data_base, table)
     #sqlite3_delete_record(data_base, table, id_column, record_id)
+"""
